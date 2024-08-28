@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.section {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.bio-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.bio {
+    flex: 1;
+}
+
+.interests, .education {
+    margin-top: 20px;
+}
+
+.social-links a {
+    font-size: 24px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.experience-item {
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
