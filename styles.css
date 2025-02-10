@@ -972,6 +972,22 @@ body.light-mode footer {
     display: block;               /* ✅ Ensure block layout for proper centering */
 }
 
+/* ✅ Base Styles for All Screens */
+.project-card h3 {
+    font-size: clamp(1em, 4vw, 1.8em); /* Responsive font size */
+    font-weight: 600;
+    color: #f7f7f7;
+    text-align: center;
+    margin: 10px 0;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    max-width: 90%;                /* Prevent overflow */
+    word-wrap: break-word;         /* Break long words */
+    overflow-wrap: break-word;     /* Ensure text fits within the box */
+    line-height: 1.3;              /* Improve readability */
+}
+
 /* ✅ Small Screens (< 600px) */
 @media (max-width: 599px) {
     .projects-container {
@@ -986,32 +1002,23 @@ body.light-mode footer {
     .projects-container::-webkit-scrollbar {
         display: none;
     }
-    .project-card h3 {
-        font-size: 1.5em; /* Slightly larger for emphasis */
-        font-weight: 600; /* Medium-bold for a clean look */
-        color: #f7f7f7;   /* Soft pink to match the aesthetic */
-        text-align: center;
-        margin: 10px 0;
-        letter-spacing: 0.5px; /* Slight spacing for clarity */
-        text-transform: capitalize; /* Neat capitalization */
-        font-family: 'Poppins', sans-serif; /* Modern, clean font */
-    }
-    
+
     .project-card {
         min-width: 100%;
         max-width: 100%;
-        height: 450px;               /* ✅ Fixed height for uniformity */
+        height: 450px;
         flex: 0 0 auto;
         scroll-snap-align: center;
-        display: flex;               
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         box-sizing: border-box;
-        align-items: center;         /* ✅ Center content horizontally */
+        padding: 15px;              /* Add padding for better spacing */
     }
 
     .project-image {
-        width: 200px;                 /* ✅ Smaller size for small screens */
+        width: 200px;
         height: 200px;
     }
 
@@ -1019,6 +1026,7 @@ body.light-mode footer {
         display: block;
     }
 }
+
 /* ✅ Extra Small Screens (< 300px) */
 @media (max-width: 299px) {
     .projects-container {
@@ -1027,46 +1035,40 @@ body.light-mode footer {
         flex-wrap: nowrap;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        gap: 5px; /* Reduced gap for smaller screens */
+        gap: 5px;
     }
 
     .projects-container::-webkit-scrollbar {
         display: none;
     }
 
-    .project-card h3 {
-        font-size: 1.2em; /* Adjusted for smaller screens */
-        font-weight: 600;
-        color: #f7f7f7;
-        text-align: center;
-        margin: 8px 0; /* Reduced margin */
-        letter-spacing: 0.4px; /* Slight adjustment for clarity */
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-    }
-
     .project-card {
         min-width: 100%;
         max-width: 100%;
-        height: 400px; /* Slightly reduced height */
+        height: 400px;
         flex: 0 0 auto;
         scroll-snap-align: center;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        box-sizing: border-box;
         align-items: center;
-        padding: 10px; /* Added padding for spacing */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .project-card h3 {
+        font-size: clamp(0.9em, 3.5vw, 1.2em); /* Responsive for tiny screens */
+        margin: 8px 0;
     }
 
     .project-image {
-        width: 150px; /* Smaller image size */
+        width: 150px;
         height: 150px;
     }
 
     .nav-arrow {
         display: block;
-        font-size: 1.2em; /* Adjust size if using icons or text */
+        font-size: 1.2em;
     }
 }
 
@@ -1084,32 +1086,28 @@ body.light-mode footer {
     .projects-container::-webkit-scrollbar {
         display: none;
     }
-    .project-card h3 {
-        font-size: 1.5em; /* Slightly larger for emphasis */
-        font-weight: 600; /* Medium-bold for a clean look */
-        color: #f7f7f7;   /* Soft pink to match the aesthetic */
-        text-align: center;
-        margin: 10px 0;
-        letter-spacing: 0.5px; /* Slight spacing for clarity */
-        text-transform: capitalize; /* Neat capitalization */
-        font-family: 'Poppins', sans-serif; /* Modern, clean font */
-    }
-    
+
     .project-card {
         min-width: 60%;
         max-width: 60%;
-        height: 500px;               
+        height: 500px;
         flex: 0 0 auto;
         scroll-snap-align: center;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
+        padding: 20px;
         box-sizing: border-box;
-        align-items: center;         /* ✅ Center content horizontally */
+    }
+
+    .project-card h3 {
+        font-size: clamp(1.2em, 4vw, 1.6em); /* Adjust for medium screens */
+        margin: 10px 0;
     }
 
     .project-image {
-        width: 200px;                 /* ✅ Slightly larger than on small screens */
+        width: 200px;
         height: 200px;
     }
 
@@ -1117,6 +1115,7 @@ body.light-mode footer {
         display: block;
     }
 }
+
 
 /* ✅ Large Screens (> 1024px) */
 @media (min-width: 1025px) {
