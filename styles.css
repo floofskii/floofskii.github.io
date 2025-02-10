@@ -968,7 +968,7 @@ body.light-mode footer {
     }
 
     .project-image {
-        width: 300px;                 /* ✅ Smaller size for small screens */
+        width: 250px;                 /* ✅ Smaller size for small screens */
         height: 200px;
     }
 
