@@ -329,12 +329,12 @@ body #sidebar {
     background: transparent; /* Transparent background */
 }
 
-/* Carousel Section */
+/* Carousel Section */ 
 #display-carousel {
     position: relative;
     text-align: center;
     padding: 40px 0;
-    background: transparent;
+    background: transparent; /* Transparent background */
     overflow: visible; /* Allow content (arrows) to overflow */
 }
 
@@ -404,11 +404,11 @@ body #sidebar {
 
 /* Correct Arrow Positioning */
 .left-arrow {
-    left: -30px; /* Move slightly outside the container */
+    left: -30px; /* Default positioning for larger screens */
 }
 
 .right-arrow {
-    right: -30px; /* Move slightly outside the container */
+    right: -30px;
 }
 
 /* Navigation Dots */
@@ -496,9 +496,7 @@ body #sidebar {
         top: 10px;
         right: 15px;
     }
-}
 
-@media (max-width: 480px) {
     .carousel-slide img {
         max-height: 200px;
     }
@@ -506,10 +504,16 @@ body #sidebar {
     .carousel-arrow {
         font-size: 18px;
         padding: 8px;
-        left: -15px;
-        right: -15px;
-        max-width: 40px; /* Reduce arrow size */
+        max-width: 40px;
         max-height: 40px;
+    }
+
+    .left-arrow {
+        left: -15px; /* Move arrows slightly closer */
+    }
+
+    .right-arrow {
+        right: -15px;
     }
 }
 
@@ -517,16 +521,45 @@ body #sidebar {
     .carousel-arrow {
         font-size: 16px;
         padding: 6px;
-        left: -10px;  /* Move arrows closer */
-        right: -10px;
-        max-width: 30px;  /* Even smaller for very small screens */
+        max-width: 30px;
         max-height: 30px;
+    }
+
+    .left-arrow {
+        left: -10px;  /* Keep arrows closer to the carousel */
+    }
+
+    .right-arrow {
+        right: -10px;
     }
 
     .carousel-slide img {
         max-height: 150px;
     }
 }
+
+/* Additional Fix for Screens Smaller Than 300px */
+@media (max-width: 300px) {
+    .carousel-arrow {
+        font-size: 14px;
+        padding: 4px;
+        max-width: 25px;
+        max-height: 25px;
+    }
+
+    .left-arrow {
+        left: 5px;  /* Move arrows inside the visible area */
+    }
+
+    .right-arrow {
+        right: 5px;
+    }
+
+    .carousel-slide img {
+        max-height: 120px; /* Adjust image size for tiny screens */
+    }
+}
+
 
 
 
@@ -953,7 +986,17 @@ body.light-mode footer {
     .projects-container::-webkit-scrollbar {
         display: none;
     }
-
+    .project-card h3 {
+        font-size: 1.5em; /* Slightly larger for emphasis */
+        font-weight: 600; /* Medium-bold for a clean look */
+        color: #f7f7f7;   /* Soft pink to match the aesthetic */
+        text-align: center;
+        margin: 10px 0;
+        letter-spacing: 0.5px; /* Slight spacing for clarity */
+        text-transform: capitalize; /* Neat capitalization */
+        font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    }
+    
     .project-card {
         min-width: 100%;
         max-width: 100%;
@@ -966,16 +1009,6 @@ body.light-mode footer {
         box-sizing: border-box;
         align-items: center;         /* ✅ Center content horizontally */
     }
-.project-card h3 {
-    font-size: 1.5em; /* Slightly larger for emphasis */
-    font-weight: 600; /* Medium-bold for a clean look */
-    color: #f7f7f7;   /* Soft pink to match the aesthetic */
-    text-align: center;
-    margin: 10px 0;
-    letter-spacing: 0.5px; /* Slight spacing for clarity */
-    text-transform: capitalize; /* Neat capitalization */
-    font-family: 'Poppins', sans-serif; /* Modern, clean font */
-}
 
     .project-image {
         width: 200px;                 /* ✅ Smaller size for small screens */
@@ -984,6 +1017,56 @@ body.light-mode footer {
 
     .nav-arrow {
         display: block;
+    }
+}
+/* ✅ Extra Small Screens (< 300px) */
+@media (max-width: 299px) {
+    .projects-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 5px; /* Reduced gap for smaller screens */
+    }
+
+    .projects-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .project-card h3 {
+        font-size: 1.2em; /* Adjusted for smaller screens */
+        font-weight: 600;
+        color: #f7f7f7;
+        text-align: center;
+        margin: 8px 0; /* Reduced margin */
+        letter-spacing: 0.4px; /* Slight adjustment for clarity */
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .project-card {
+        min-width: 100%;
+        max-width: 100%;
+        height: 400px; /* Slightly reduced height */
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        align-items: center;
+        padding: 10px; /* Added padding for spacing */
+    }
+
+    .project-image {
+        width: 150px; /* Smaller image size */
+        height: 150px;
+    }
+
+    .nav-arrow {
+        display: block;
+        font-size: 1.2em; /* Adjust size if using icons or text */
     }
 }
 
@@ -1001,17 +1084,17 @@ body.light-mode footer {
     .projects-container::-webkit-scrollbar {
         display: none;
     }
-.project-card h3 {
-    font-size: 1.5em; /* Slightly larger for emphasis */
-    font-weight: 600; /* Medium-bold for a clean look */
-    color: #f7f7f7;   /* Soft pink to match the aesthetic */
-    text-align: center;
-    margin: 10px 0;
-    letter-spacing: 0.5px; /* Slight spacing for clarity */
-    text-transform: capitalize; /* Neat capitalization */
-    font-family: 'Poppins', sans-serif; /* Modern, clean font */
-}
-
+    .project-card h3 {
+        font-size: 1.5em; /* Slightly larger for emphasis */
+        font-weight: 600; /* Medium-bold for a clean look */
+        color: #f7f7f7;   /* Soft pink to match the aesthetic */
+        text-align: center;
+        margin: 10px 0;
+        letter-spacing: 0.5px; /* Slight spacing for clarity */
+        text-transform: capitalize; /* Neat capitalization */
+        font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    }
+    
     .project-card {
         min-width: 60%;
         max-width: 60%;
@@ -1047,9 +1130,25 @@ body.light-mode footer {
         max-width: 90%;           /* ✅ Slightly larger container */
         margin: 0 auto;           /* ✅ Center the container */
     }
-
+    .project-card h3 {
+        font-size: 1.5em; /* Slightly larger for emphasis */
+        font-weight: 600; /* Medium-bold for a clean look */
+        color: #f7f7f7;   /* Soft pink to match the aesthetic */
+        text-align: center;
+        margin: 10px 0;
+        letter-spacing: 0.5px; /* Slight spacing for clarity */
+        text-transform: capitalize; /* Neat capitalization */
+        font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    }
+    
     .projects-container::-webkit-scrollbar {
         display: none;
+    }
+
+    .project-card {
+        min-width: 45%;           /* ✅ Consistent card size */
+        max-width: 30%;
+        height: 520px;            /* ✅ Taller for large screens */
     }
 .project-card h3 {
     font-size: 1.5em; /* Slightly larger for emphasis */
@@ -1061,12 +1160,6 @@ body.light-mode footer {
     text-transform: capitalize; /* Neat capitalization */
     font-family: 'Poppins', sans-serif; /* Modern, clean font */
 }
-
-    .project-card {
-        min-width: 45%;           /* ✅ Consistent card size */
-        max-width: 30%;
-        height: 520px;            /* ✅ Taller for large screens */
-    }
 
     .project-image {
         width: 400px;
@@ -1100,6 +1193,7 @@ body.light-mode footer {
 .contact p {
     margin: 5px 0; /* Reduce vertical spacing */
 }
+
 
 
 
