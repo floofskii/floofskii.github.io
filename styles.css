@@ -966,6 +966,16 @@ body.light-mode footer {
         box-sizing: border-box;
         align-items: center;         /* ✅ Center content horizontally */
     }
+.project-card h3 {
+    font-size: 1.5em; /* Slightly larger for emphasis */
+    font-weight: 600; /* Medium-bold for a clean look */
+    color: #f7f7f7;   /* Soft pink to match the aesthetic */
+    text-align: center;
+    margin: 10px 0;
+    letter-spacing: 0.5px; /* Slight spacing for clarity */
+    text-transform: capitalize; /* Neat capitalization */
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+}
 
     .project-image {
         width: 200px;                 /* ✅ Smaller size for small screens */
@@ -991,6 +1001,16 @@ body.light-mode footer {
     .projects-container::-webkit-scrollbar {
         display: none;
     }
+.project-card h3 {
+    font-size: 1.5em; /* Slightly larger for emphasis */
+    font-weight: 600; /* Medium-bold for a clean look */
+    color: #f7f7f7;   /* Soft pink to match the aesthetic */
+    text-align: center;
+    margin: 10px 0;
+    letter-spacing: 0.5px; /* Slight spacing for clarity */
+    text-transform: capitalize; /* Neat capitalization */
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+}
 
     .project-card {
         min-width: 60%;
@@ -1031,6 +1051,16 @@ body.light-mode footer {
     .projects-container::-webkit-scrollbar {
         display: none;
     }
+.project-card h3 {
+    font-size: 1.5em; /* Slightly larger for emphasis */
+    font-weight: 600; /* Medium-bold for a clean look */
+    color: #f7f7f7;   /* Soft pink to match the aesthetic */
+    text-align: center;
+    margin: 10px 0;
+    letter-spacing: 0.5px; /* Slight spacing for clarity */
+    text-transform: capitalize; /* Neat capitalization */
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+}
 
     .project-card {
         min-width: 45%;           /* ✅ Consistent card size */
@@ -1073,15 +1103,5 @@ body.light-mode footer {
 
 
 
-.project-card h3 {
-    font-size: 1.5em; /* Slightly larger for emphasis */
-    font-weight: 600; /* Medium-bold for a clean look */
-    color: #f7f7f7;   /* Soft pink to match the aesthetic */
-    text-align: center;
-    margin: 10px 0;
-    letter-spacing: 0.5px; /* Slight spacing for clarity */
-    text-transform: capitalize; /* Neat capitalization */
-    font-family: 'Poppins', sans-serif; /* Modern, clean font */
-}
 
 
