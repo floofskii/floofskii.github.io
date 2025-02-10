@@ -1,0 +1,1087 @@
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: #eaeaea;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #16213e;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    color: inherit;
+}
+
+header.light-mode {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+/* Navbar Links */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative; /* For hover underline effect */
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Underline Effect */
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff85b3; /* Pink underline */
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #ff85b3; /* Change text color on hover */
+}
+
+/* Theme & Menu Toggle Buttons */
+.theme-toggle, .menu-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: auto;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Sidebar */
+#sidebar {
+    display: none;
+    flex-direction: column;
+    background-color: #16213e;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%); /* Hidden by default */
+}
+
+#sidebar.active {
+    display: flex;
+    transform: translateX(0); /* Slide-in effect */
+}
+
+#sidebar a {
+    padding: 15px 10px;
+    margin: 5px 0;
+    background-color: rgba(216, 105, 179, 0.1);
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+/* Sidebar Hover Effect */
+#sidebar a:hover {
+    background-color: #ff85b3;
+    color: #ffffff;
+    transform: translateX(10px);
+}
+
+body #sidebar {
+    background-color: #764068f1 !important; /* Forces the color change */
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 100px auto 0;
+    padding: 20px;
+}
+
+/* 🌸 Social Icons Styling */
+.social-icons a {
+    color: #ff85b3; /* Soft pink color */
+    font-size: 26px; /* Slightly bigger icons */
+    margin: 0 10px; /* Space between icons */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    text-decoration: none; /* Remove underline */
+}
+
+/* ✨ Hover Effect */
+.social-icons a:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+    color: #8a2be2; /* Change to purple on hover for contrast */
+}
+
+/* 🗂️ Flexbox for Profile and Bunny (Isolated) */
+.profile-bunny-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between profile and bunny */
+    flex-wrap: wrap; /* Responsive stacking for smaller screens */
+    margin-bottom: 20px; /* Space below the profile section */
+}
+
+/* 📷 Profile Image Styling */
+.profile-img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* 🗂️ Flexbox for Profile and Bunny (Fixed) */
+.profile-bunny-wrapper {
+    display: flex;
+    align-items: center; 
+    justify-content: center; /* Center align horizontally */
+    gap: 30px; /* Add space between profile and bunny */
+    flex-wrap: wrap; /* Stack on small screens */
+    margin-bottom: 20px; /* Space before the biography */
+}
+
+/* 📷 Profile Image Styling */
+.profile-details {
+    text-align: center;
+}
+
+.profile-img {
+    width: 180px; /* Adjust profile picture size */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* 🐰 Bunny GIF Styling */
+.bunny-gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bunny-gif {
+    width: 120px; /* Adjust bunny size */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    cursor: pointer;
+}
+
+/* 🎯 Hover Effect */
+.bunny-gif:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+/* 🗂️ Flexbox for Profile and Bunny (Aligned) */
+.profile-bunny-wrapper {
+    display: flex;
+    align-items: center; 
+    justify-content: center; /* Center align horizontally */
+    gap: 30px; /* Space between profile and bunny */
+    flex-wrap: wrap; /* Stack on small screens */
+    margin-bottom: 20px; /* Space before the biography */
+}
+
+/* 📷 Profile Image Styling (Increased Size) */
+.profile-details {
+    text-align: center;
+}
+
+.profile-img {
+    width: 220px;  /* 🔥 Increased from 180px to 220px */
+    border-radius: 15px; /* Optional: Slightly rounder corners */
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Optional: Smooth hover effect */
+}
+
+/* 🐰 Bunny GIF Styling */
+.bunny-gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bunny-gif {
+    width: 120px; /* Bunny size stays the same */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    cursor: pointer;
+}
+
+/* 🎯 Hover Effect */
+.profile-img:hover,
+.bunny-gif:hover {
+    transform: scale(1.05); /* Slight zoom when hovered */
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 768px) {
+    .profile-bunny-wrapper {
+        flex-direction: column; /* Stack vertically on mobile */
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 180px; /* Adjust size for smaller screens */
+    }
+
+    .bunny-gif {
+        width: 100px; /* Resize bunny on smaller screens */
+    }
+}
+
+
+
+
+/* Timeline Design */
+#experience {
+    position: relative;
+    padding-left: 40px;
+}
+
+#experience::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff85b3, #8a2be2);
+}
+
+.experience {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.experience:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.experience::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    background: #ff85b3;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 133, 179, 0.8);
+}
+
+/* Carousel Section */
+#display-carousel {
+    position: relative;
+    text-align: center;
+    padding: 40px 0;
+    background: transparent; /* Transparent background */
+}
+
+/* Carousel Section */
+#display-carousel {
+    position: relative;
+    text-align: center;
+    padding: 40px 0;
+    background: transparent;
+    overflow: visible; /* Allow content (arrows) to overflow */
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    overflow: visible; /* Ensure arrows aren't cut off */
+    border-radius: 20px;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Carousel Slides */
+.carousel-slide {
+    display: none;
+    transition: opacity 0.8s ease-in-out;
+    background: transparent;
+    border-radius: 20px;
+}
+
+.carousel-slide.active {
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Image Styling */
+.carousel-slide img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+    background: transparent;
+}
+
+/* Hover Effect */
+.carousel-slide img:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 133, 179, 0.9);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 24px;
+    z-index: 10;
+    opacity: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for better contrast */
+}
+
+/* Hover Effect for Arrows */
+.carousel-arrow:hover {
+    background-color: #8a2be2;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Correct Arrow Positioning */
+.left-arrow {
+    left: -30px; /* Move slightly outside the container */
+}
+
+.right-arrow {
+    right: -30px; /* Move slightly outside the container */
+}
+
+/* Navigation Dots */
+.carousel-dots {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.carousel-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-dots span.active {
+    background-color: #ff85b3;
+}
+
+/* Lightbox Overlay */
+.lightbox-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    z-index: 9999; /* On top of everything */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Subtle blur effect */
+}
+
+/* Lightbox Image */
+.lightbox-image {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+    animation: zoomIn 0.5s ease;
+}
+
+/* Close Button */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 10000;
+}
+
+.lightbox-close:hover {
+    color: #ff85b3;
+}
+
+/* Zoom Animation */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .lightbox-image {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+
+    .lightbox-close {
+        font-size: 30px;
+        top: 10px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide img {
+        max-height: 200px;
+    }
+
+    .carousel-arrow {
+        font-size: 18px;
+        padding: 8px;
+        left: -15px;
+        right: -15px;
+        max-width: 40px; /* Reduce arrow size */
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 360px) {
+    .carousel-arrow {
+        font-size: 16px;
+        padding: 6px;
+        left: -10px;  /* Move arrows closer */
+        right: -10px;
+        max-width: 30px;  /* Even smaller for very small screens */
+        max-height: 30px;
+    }
+
+    .carousel-slide img {
+        max-height: 150px;
+    }
+}
+
+
+
+
+/* 📂 Projects Section */
+#projects {
+    margin: 50px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Hide overflow for smooth scrolling */
+}
+
+/* Wrapper to Hold Arrows and Project Cards */
+.projects-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    overflow: hidden; /* Ensure arrows and cards stay within bounds */
+}
+
+/* ✅ Projects Container */
+.projects-container {
+    display: flex;
+    flex-direction: row;           /* Force horizontal layout */
+    gap: 20px;                     /* Space between cards */
+    overflow-x: auto;              /* Enable horizontal scrolling */
+    scroll-behavior: smooth;       /* Smooth scroll effect */
+    flex-wrap: nowrap;             /* Prevent vertical stacking */
+    scrollbar-width: none;         /* Hide scrollbar (Firefox) */
+    max-width: 90vw;               /* Responsive width */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.projects-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* 🗂️ Project Card */
+.project-card {
+    background:   linear-gradient(145deg, #ff85b3, #9365bd);
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    scroll-snap-align: center;      /* Snap card to center */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 auto;                 /* Prevent stretching */
+}
+
+/* Decorative Star */
+.project-card::before {
+    content: "★";
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: rotate(15deg);
+}
+
+/* Hover Effect */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Call-to-Action Button */
+.project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #8a2be2;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #8a2be2;
+    color: #ffffff;
+}
+
+/* ⬅️➡️ Navigation Arrows */
+.nav-arrow {
+    background-color: rgba(255, 133, 179, 0.9);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 12px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+    backdrop-filter: blur(5px);
+    opacity: 0.9;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Arrow Hover Effect */
+.nav-arrow:hover {
+    background-color: #8a2be2;
+    transform: translateY(-50%) scale(1.1);
+    opacity: 1;
+}
+
+/* Arrow Positioning */
+.projects-left-arrow {
+    left: 10px;
+}
+
+.projects-right-arrow {
+    right: 10px;
+}
+
+/* 🔘 Pagination Dots */
+.projects-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.projects-dots span {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.projects-dots .active {
+    background-color: #ff85b3;
+}
+
+/* ✅ Responsive Design */
+
+/* ✅ Large Screens (> 768px) */
+@media (min-width: 769px) {
+    .project-card {
+        min-width: 300px;
+        max-width: 300px;
+        height: 350px;                  /* ✅ Fixed height for uniformity */
+        display: flex;                  /* ✅ Flexbox for even layout */
+        flex-direction: column;         /* Stack content vertically */
+        justify-content: space-between; /* ✅ Space out content evenly */
+        align-items: center;            /* Center content horizontally */
+        box-sizing: border-box;         /* Include padding in box dimensions */
+        padding: 20px;                  /* Optional padding for spacing */
+    }
+
+    .project-link {
+        margin-top: auto;               /* ✅ Push button to the bottom */
+        align-self: center;             /* Center the button horizontally */
+    }
+}
+
+
+
+
+/* Section Title */
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ff85b3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #ff85b3;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Posts Section */
+#posts {
+    margin: 50px;
+    text-align: left;
+}
+.read-more {
+    background-color: #ffffff;               /* White background */
+    color: #8a2be2;                          /* Purple text color */
+    padding: 10px 25px;                      /* Padding for button size */
+    border-radius: 50px;                     /* Fully rounded corners */
+    text-decoration: none;                   /* Remove underline */
+    font-weight: bold;                       /* Bold text */
+    font-size: 14px;                         /* Consistent font size */
+    display: inline-block;                   /* Button-like behavior */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover */
+    cursor: pointer;
+    border: none;                            /* No border */
+    text-align: center;                      /* Center the text */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.7); /* Soft shadow for depth */
+    margin-top: 10px;                        /* Space from other content */
+}
+
+/* ✅ Hover Effect */
+.read-more:hover {
+    background-color: #8a2be2;              /* Purple background on hover */
+    color: #ffffff;                         /* White text on hover */
+    transform: translateY(-2px);            /* Slight lift on hover */
+    box-shadow: 0 2px 10px rgba(138, 43, 226, 0.4); /* Subtle glow effect */
+}
+
+
+.posts{
+ display:flex;
+ flex-direction: column;
+ gap: 20px;
+
+}
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px; /* Adds space between cards */
+    padding: 20px;
+}
+
+/* Post Card (Default: Dark Mode) */
+.post-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #eaeaea;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    overflow: hidden; /* Prevents content from spilling out */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 15px; /* Adds internal spacing */
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+}
+
+/* Light Mode Styling */
+body.light-mode .post-card {
+    background: #ffffff;
+    color: #070707;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-color: #5e5e7016;
+}
+
+/* Post Image */
+.post-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* Optional: round the image corners */
+    margin-bottom: 10px; /* Space between image and content */
+}
+
+/* Post Content */
+.post-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    word-wrap: break-word; /* Handles long words */
+    overflow-wrap: break-word; /* Ensures text wraps properly */
+}
+
+/* Post Title */
+.post-content h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #ff85b3;
+    line-height: 1.4;
+}
+
+/* Post Description */
+.post-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Read More Button */
+.read-more {
+    align-self: flex-start;
+    padding: 8px 15px;
+    background-color: #ff85b3;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: auto; /* Pushes the button to the bottom */
+}
+
+/* Hover Effects */
+.post-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+body.light-mode .post-card:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.post-card:hover .post-image {
+    transform: scale(1.05);
+}
+
+.read-more:hover {
+    background-color: #8a2be2;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .posts-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #cf5ba5;
+    text-align: center;
+    padding: 10px 0;
+    color: #eaeaea;
+}
+
+body.light-mode footer {
+    background-color: #cf5ba5;
+    color: #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav#main-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header h1 {
+        text-align: center;
+        flex: 1;
+    }
+
+    .theme-toggle {
+        margin-left: 0;
+    }
+
+    #sidebar {
+        display: none;
+        flex-direction: column;
+        background-color: #16213e;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        padding: 20px;
+        z-index: 1001;
+    }
+
+    #sidebar.active {
+        display: flex;
+    }
+
+    #experience::before {
+        left: 10px;
+    }
+
+    .experience::before {
+        left: -22px;
+    }
+
+    #experience {
+        padding-left: 30px;
+    }
+
+    /* Projects Responsive */
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+}
+
+
+/* ✅ General Image Styling */
+.project-image {
+    width: 200px;                  /* ✅ Small fixed width */
+    height: 200px;                 /* ✅ Small fixed height */
+    object-fit: contain;          /* ✅ Maintains original image ratio */
+    border-radius: 10px;          /* ✅ Rounded corners for aesthetics */
+    margin: 10px auto;            /* ✅ Center the image horizontally */
+    display: block;               /* ✅ Ensure block layout for proper centering */
+}
+
+/* ✅ Small Screens (< 600px) */
+@media (max-width: 599px) {
+    .projects-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 10px;
+    }
+
+    .projects-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .project-card {
+        min-width: 100%;
+        max-width: 100%;
+        height: 450px;               /* ✅ Fixed height for uniformity */
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+        display: flex;               
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        align-items: center;         /* ✅ Center content horizontally */
+    }
+
+    .project-image {
+        width: 300px;                 /* ✅ Smaller size for small screens */
+        height: 200px;
+    }
+
+    .nav-arrow {
+        display: block;
+    }
+}
+
+/* ✅ Medium Screens (600px - 768px) */
+@media (min-width: 500px) and (max-width: 768px) {
+    .projects-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .projects-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .project-card {
+        min-width: 60%;
+        max-width: 60%;
+        height: 500px;               
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        align-items: center;         /* ✅ Center content horizontally */
+    }
+
+    .project-image {
+        width: 200px;                 /* ✅ Slightly larger than on small screens */
+        height: 200px;
+    }
+
+    .nav-arrow {
+        display: block;
+    }
+}
+
+/* ✅ Large Screens (> 1024px) */
+@media (min-width: 1025px) {
+    .projects-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;        /* ✅ Keep cards in a single row */
+        gap: 20px;
+        overflow-x: auto;         /* ✅ Enable horizontal scroll */
+        scroll-snap-type: x mandatory;
+        max-width: 90%;           /* ✅ Slightly larger container */
+        margin: 0 auto;           /* ✅ Center the container */
+    }
+
+    .projects-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .project-card {
+        min-width: 45%;           /* ✅ Consistent card size */
+        max-width: 30%;
+        height: 520px;            /* ✅ Taller for large screens */
+    }
+
+    .project-image {
+        width: 400px;
+        height: 400px;
+    }
+
+    .nav-arrow {
+        display: block;           /* ✅ Ensure arrows are always visible */
+    }
+}
+/* Default (Dark Mode / General) */
+.contact a {
+    color: white; /* White text by default */
+    text-decoration: none;
+    font-size: 0.9em; /* Smaller text size */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Icon Color (consistent in both modes) */
+.contact i {
+    color: #ff69b4; /* Pink icons */
+    font-size: 1.2em; /* Adjust icon size if needed */
+}
+
+/* Light Mode */
+.light-mode .contact a {
+    color: black; /* Black text for light mode */
+}
+
+/* Optional: Adjust spacing between icons and text */
+.contact p {
+    margin: 5px 0; /* Reduce vertical spacing */
+}
+
+
+
+.project-card h3 {
+    font-size: 1.5em; /* Slightly larger for emphasis */
+    font-weight: 600; /* Medium-bold for a clean look */
+    color: #f7f7f7;   /* Soft pink to match the aesthetic */
+    text-align: center;
+    margin: 10px 0;
+    letter-spacing: 0.5px; /* Slight spacing for clarity */
+    text-transform: capitalize; /* Neat capitalization */
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+}
+
+
