@@ -1072,6 +1072,8 @@ body.light-mode footer {
     }
 }
 
+
+
 /* ✅ Medium Screens (600px - 768px) */
 @media (min-width: 500px) and (max-width: 768px) {
     .projects-container {
@@ -1114,6 +1116,41 @@ body.light-mode footer {
     .nav-arrow {
         display: block;
     }
+}
+/* 🌸 Stylish Filter Buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: linear-gradient(135deg, #ff69b4, #8a2be2);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px; /* Rounded edges for a modern look */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 10px rgba(255, 105, 180, 0.3);
+    text-transform: uppercase;
+}
+
+.filter-btn:hover {
+    background: linear-gradient(135deg, #b66891, #6a0dad);
+    box-shadow: 2px 2px 15px rgba(255, 20, 147, 0.5);
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #ac76b6, #8a2be2);
+    color: white;
+    box-shadow: 2px 2px 20px rgba(255, 69, 0, 0.5);
+    transform: translateY(-3px); /* Extra lift for active button */
 }
 
 
