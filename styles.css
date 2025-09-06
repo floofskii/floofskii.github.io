@@ -1,3 +1,10 @@
+:root {
+  --primary: #4b0082;   /* Indigo */
+  --secondary: #8a2be2; /* Violet */
+  --accent: #c084fc;    /* Lavender */
+}
+
+
 /* Global Styles */
 html {
     scroll-behavior: smooth;
@@ -1229,6 +1236,7 @@ body.light-mode footer {
 .contact p {
     margin: 5px 0; /* Reduce vertical spacing */
 }
+
 
 
 
