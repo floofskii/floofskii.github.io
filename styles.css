@@ -288,7 +288,7 @@ body #sidebar {
     left: 20px;
     width: 4px;
     height: 100%;
-    background: linear-gradient(to bottom, #ff85b3, #8a2be2);
+    background: linear-gradient(to bottom, #4b0082, #c084fc);
 }
 
 .experience {
@@ -315,7 +315,7 @@ body #sidebar {
     top: 20px;
     width: 15px;
     height: 15px;
-    background: #ff85b3;
+    background: #4b0082;
     border: 3px solid white;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(255, 133, 179, 0.8);
@@ -891,7 +891,7 @@ body.light-mode .post-card:hover {
 
 /* Footer */
 footer {
-    background-color: #cf5ba5;
+    background-color:#4b0082;
     text-align: center;
     padding: 10px 0;
     color: #eaeaea;
@@ -1229,6 +1229,7 @@ body.light-mode footer {
 .contact p {
     margin: 5px 0; /* Reduce vertical spacing */
 }
+
 
 
 
