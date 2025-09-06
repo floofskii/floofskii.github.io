@@ -1,8 +1,3 @@
-:root {
-  --primary: #4b0082;   /* Indigo */
-  --secondary: #8a2be2; /* Violet */
-  --accent: #c084fc;    /* Lavender */
-}
 
 
 /* Global Styles */
@@ -743,10 +738,10 @@ body #sidebar {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #ff85b3;
+    color: #4b0082;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-bottom: 2px solid #ff85b3;
+    border-bottom: 2px solid #4b0082;
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -1236,6 +1231,7 @@ body.light-mode footer {
 .contact p {
     margin: 5px 0; /* Reduce vertical spacing */
 }
+
 
 
 
