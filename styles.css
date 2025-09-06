@@ -121,7 +121,7 @@ nav a:hover {
 #sidebar a {
     padding: 15px 10px;
     margin: 5px 0;
-    background-color: rgba(216, 105, 179, 0.1);
+    background-color: rgba(75, 0, 130, 0.1);
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     text-align: center;
@@ -129,7 +129,7 @@ nav a:hover {
 
 /* Sidebar Hover Effect */
 #sidebar a:hover {
-    background-color: #ff85b3;
+    background-color: #4b0082;
     color: #ffffff;
     transform: translateX(10px);
 }
@@ -147,7 +147,7 @@ body #sidebar {
 
 /* 🌸 Social Icons Styling */
 .social-icons a {
-    color: #ff85b3; /* Soft pink color */
+    color: #8a2be2; /* Soft pink color */
     font-size: 26px; /* Slightly bigger icons */
     margin: 0 10px; /* Space between icons */
     transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
@@ -157,7 +157,7 @@ body #sidebar {
 /* ✨ Hover Effect */
 .social-icons a:hover {
     transform: scale(1.2); /* Slight zoom on hover */
-    color: #8a2be2; /* Change to purple on hover for contrast */
+    color: #c084fc; /* Change to purple on hover for contrast */
 }
 
 /* 🗂️ Flexbox for Profile and Bunny (Isolated) */
@@ -1229,6 +1229,7 @@ body.light-mode footer {
 .contact p {
     margin: 5px 0; /* Reduce vertical spacing */
 }
+
 
 
 
