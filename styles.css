@@ -893,14 +893,14 @@ body.light-mode .post-card:hover {
 
 /* Footer */
 footer {
-    background-color:#4b0082;
+    background-color: #4b0082;
     text-align: center;
     padding: 10px 0;
     color: #eaeaea;
 }
 
 body.light-mode footer {
-    background-color: #cf5ba5;
+    background-color: #4b0082;
     color: #000000;
 }
 
@@ -1231,6 +1231,7 @@ body.light-mode footer {
 .contact p {
     margin: 5px 0; /* Reduce vertical spacing */
 }
+
 
 
 
