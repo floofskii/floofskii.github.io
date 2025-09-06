@@ -840,7 +840,7 @@ body.light-mode .post-card {
 .post-content h3 {
     margin: 0;
     font-size: 20px;
-    color: #ff85b3;
+    color: #4b0082;
     line-height: 1.4;
 }
 
@@ -855,7 +855,7 @@ body.light-mode .post-card {
 .read-more {
     align-self: flex-start;
     padding: 8px 15px;
-    background-color: #ff85b3;
+    background-color: #8a2be2;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
@@ -1231,6 +1231,7 @@ body.light-mode footer {
 .contact p {
     margin: 5px 0; /* Reduce vertical spacing */
 }
+
 
 
 
