@@ -1,5 +1,3 @@
-
-
 /* Global Styles */
 html {
     scroll-behavior: smooth;
@@ -290,7 +288,7 @@ body #sidebar {
     left: 20px;
     width: 4px;
     height: 100%;
-    background: linear-gradient(to bottom, #4b0082, #c084fc);
+    background: linear-gradient(to bottom, #ff85b3, #8a2be2);
 }
 
 .experience {
@@ -317,7 +315,7 @@ body #sidebar {
     top: 20px;
     width: 15px;
     height: 15px;
-    background: #4b0082;
+    background: #ff85b3;
     border: 3px solid white;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(255, 133, 179, 0.8);
@@ -738,10 +736,10 @@ body #sidebar {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #4b0082;
+    color: #ff85b3;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-bottom: 2px solid #4b0082;
+    border-bottom: 2px solid #ff85b3;
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -840,7 +838,7 @@ body.light-mode .post-card {
 .post-content h3 {
     margin: 0;
     font-size: 20px;
-    color: #4b0082;
+    color: #ff85b3;
     line-height: 1.4;
 }
 
@@ -855,7 +853,7 @@ body.light-mode .post-card {
 .read-more {
     align-self: flex-start;
     padding: 8px 15px;
-    background-color: #8a2be2;
+    background-color: #ff85b3;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
@@ -893,14 +891,14 @@ body.light-mode .post-card:hover {
 
 /* Footer */
 footer {
-    background-color: #4b0082;
+    background-color: #cf5ba5;
     text-align: center;
     padding: 10px 0;
     color: #eaeaea;
 }
 
 body.light-mode footer {
-    background-color: #4b0082;
+    background-color: #cf5ba5;
     color: #000000;
 }
 
@@ -1231,15 +1229,4 @@ body.light-mode footer {
 .contact p {
     margin: 5px 0; /* Reduce vertical spacing */
 }
-
-
-
-
-
-
-
-
-
-
-
 
